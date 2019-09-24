@@ -386,5 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   player: {fileID: 0}
-  explosionPrefab: {fileID: 0}
-  shipExpPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 5414635674896868251, guid: df41904ba8800b64eb0e28afb0128a2d,
+    type: 3}
+  shipExpPrefab: {fileID: 5414635674896868251, guid: d850383a7a206e94abe8268ff95ce90f,
+    type: 3}

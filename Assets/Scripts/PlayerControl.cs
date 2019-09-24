@@ -4,24 +4,39 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    public GameManager gm;
+
     public float playerSpeed = 0.2f;
 
     float movementX;
     float movementY;
 
+    public float bulletReset;
+
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
+
+    public MeshRenderer playerMR;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        playerMR = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MovementInput();
+        if (gm.gameState == 2) //Player is visible and has control
+        {
+            MovementInput();
+            playerMR.enabled = true;
+        }
+        else //Player is invisible; no control
+        {
+            playerMR.enabled = false;
+        }
     }
 
     void MovementInput()
@@ -53,9 +68,12 @@ public class PlayerControl : MonoBehaviour
 
         transform.position += new Vector3(movementX, movementY, 0f);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        bulletReset++;
+
+        if (Input.GetKeyDown(KeyCode.Space) && bulletReset >= 20)
         {
             Fire();
+            bulletReset = 0;
         }
     }
 

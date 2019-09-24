@@ -29,15 +29,15 @@ public class AsteroidControl : MonoBehaviour {
         {
             //Assigns explosion animation to player and ends the game
             gm.gameState = 3;
-            //GameObject shipExp = Instantiate(shipExpPrefab);
-            //shipExp.transform.position = player.transform.position;
+            GameObject shipExp = Instantiate(shipExpPrefab);
+            shipExp.transform.position = player.transform.position;
         }
 
         if(collision.gameObject.tag == "Bullet")
         {
             //Assigns explosion animation to an asteroid and destroys it
-            //GameObject explosion = Instantiate(explosionPrefab);
-            //explosion.transform.position = transform.position;
+            GameObject explosion = Instantiate(explosionPrefab);
+            explosion.transform.position = transform.position;
 
             int index = gm.asteroids.IndexOf(gameObject);
             gm.asteroids.Remove(gameObject);

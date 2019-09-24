@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour {
 
         for (int i = 0; i < 3; i++)
         {
-            //spawnStar();
+            spawnStar();
         }
 
         for (int i = 0; i<stars.Count; i++) //Spawns Stars
@@ -106,8 +106,8 @@ public class GameManager : MonoBehaviour {
 
             // Fraction of journey completed = current distance divided by total distance.
             float fracJourney = distCovered / distance;
-            Vector3 startMarker = new Vector3(stars[i].transform.position.x, startY, 0);
-            Vector3 endMarker = new Vector3(stars[i].transform.position.x, endY, 0);
+            Vector3 startMarker = new Vector3(stars[i].transform.position.x, startY, 1);
+            Vector3 endMarker = new Vector3(stars[i].transform.position.x, endY, 1);
 
             // Set our position as a fraction of the distance between the markers.
             stars[i].transform.position = Vector3.Lerp(startMarker, endMarker, fracJourney);
@@ -206,7 +206,7 @@ public class GameManager : MonoBehaviour {
             
             float starXPos = Random.Range(-13f, 13f); //Random X Position Assignment
 
-            newStar.transform.position = new Vector3(starXPos, startY, 0f); //New stars Positions
+            newStar.transform.position = new Vector3(starXPos, startY, 1); //New stars Positions
 
             stars.Add(newStar); //Adding new stars to the list
 

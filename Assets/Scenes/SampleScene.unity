@@ -955,12 +955,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a8ff8edd2dedb4cac4944c0a4ce1aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallPrefab: {fileID: 7107332979762909373, guid: d2845d5a76861404cb14f12a7ca77a00,
+  smallPrefab: {fileID: 1408512210189836, guid: 51ea0ca4f227c9c44a093d9db1a1bea8,
     type: 3}
-  medPrefab: {fileID: 3708255249941581146, guid: bea2b11ebb7ab064086e95aeeacb3179,
-    type: 3}
-  bigPrefab: {fileID: 1507387161823223802, guid: 2599466684d4e5e499bc1362781bcd4f,
-    type: 3}
+  medPrefab: {fileID: 1309596929762218, guid: d725f047880178c4a97092bacafe96c0, type: 3}
+  bigPrefab: {fileID: 1869491655564268, guid: 89f74b8e746eea748adfd940ef3c4cd5, type: 3}
   astPrefab: {fileID: 2411302285001620873, guid: cc0c53697c36bc441b1f4671b3fd23a1,
     type: 3}
   asteroids: []
