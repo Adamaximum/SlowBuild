@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 2411302285004684863}
   - component: {fileID: 2411302284995066509}
   - component: {fileID: 4748112543374914343}
+  - component: {fileID: 1577451969541912902}
   m_Layer: 0
   m_Name: Detailed Asteroid
   m_TagString: Enemy
@@ -366,8 +367,24 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2411302285001620873}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.8963825
   m_Center: {x: 0, y: 0, z: 0.014093157}
+--- !u!114 &1577451969541912902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2411302285001620873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec058538bed3ad4f853bc18fe56059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  player: {fileID: 0}
+  explosionPrefab: {fileID: 0}
+  shipExpPrefab: {fileID: 0}
