@@ -7,8 +7,6 @@ public class AsteroidControl : MonoBehaviour {
     public GameManager gm;
     public PlayerControl player;
 
-    //public AudioSource astExpSnd;
-
     public GameObject explosionPrefab;
     public GameObject shipExpPrefab;
     

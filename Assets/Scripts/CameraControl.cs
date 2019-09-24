@@ -6,7 +6,7 @@ public class CameraControl : MonoBehaviour
 {
     public GameManager gm;
     
-    public float targetDest;
+    public int targetDest;
 
     public float targetY = -11.3f;
     public float targetZ = -5f;
@@ -26,7 +26,7 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gm.astDest >= targetDest)
+        if(gm.astDest >= targetDest && gm.gameState == 2)
         {
             if(transform.position.y > targetY)
             {
