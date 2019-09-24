@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   playerSpeed: 0.2
+  origin: {x: 0, y: 0, z: 0}
   bulletReset: 0
   bulletPrefab: {fileID: 6376160691190760283, guid: 9b31dd6c2656ddc49a8f3ec488d93f2b,
     type: 3}
@@ -520,7 +521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5821549967014877702}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &938768330
 TrailRenderer:
@@ -531,8 +532,8 @@ TrailRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938768328}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 0
@@ -638,6 +639,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -710,6 +712,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d956c865ca8135a48ba3d99a08b8e5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  targetDest: 1
+  targetY: -11.3
+  targetZ: -5
+  rotateX: -72
+  adder: 0
 --- !u!1 &1122693677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,8 +1511,8 @@ Transform:
   m_LocalScale: {x: 0.15312484, y: 0.15312484, z: 0.15312484}
   m_Children:
   - {fileID: 1122693678}
-  - {fileID: 5824643676528270294}
   - {fileID: 938768329}
+  - {fileID: 5824643676528270294}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -1555,7 +1575,7 @@ Transform:
   - {fileID: 5821596126953325202}
   - {fileID: 5824675148153570016}
   m_Father: {fileID: 5821549967014877702}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5824675148153570016
 Transform:
@@ -1703,6 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   playerSpeed: 0.2
+  origin: {x: 0, y: 0, z: 0}
   bulletReset: 0
   bulletPrefab: {fileID: 6376160691190760283, guid: 9b31dd6c2656ddc49a8f3ec488d93f2b,
     type: 3}

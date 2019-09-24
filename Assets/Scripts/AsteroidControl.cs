@@ -25,7 +25,7 @@ public class AsteroidControl : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player" && gm.gameState == 2)
         {
             //Assigns explosion animation to player and ends the game
             gm.gameState = 3;
@@ -49,7 +49,6 @@ public class AsteroidControl : MonoBehaviour {
             Destroy(collision.gameObject);
 
             gm.astDest++;
-
         }
     }
 }

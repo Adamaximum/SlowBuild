@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour {
         stars = new List<GameObject>(); //Stars List
 
         //Spawning Range for Stars and Asteroids
-        startY = 9;
+        startY = 12;
         endY = -6;
         distance = startY - endY;
 

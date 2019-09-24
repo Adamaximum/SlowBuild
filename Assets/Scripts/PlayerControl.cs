@@ -11,6 +11,8 @@ public class PlayerControl : MonoBehaviour
     float movementX;
     float movementY;
 
+    public Vector3 origin;
+
     public float bulletReset;
 
     public GameObject bulletPrefab;
@@ -23,6 +25,8 @@ public class PlayerControl : MonoBehaviour
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         playerMR = GetComponent<MeshRenderer>();
+
+        origin = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
