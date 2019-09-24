@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public GameManager gm;
-
+    
     public float targetDest;
 
     public float targetY = -11.3f;
@@ -13,11 +13,14 @@ public class CameraControl : MonoBehaviour
 
     public float rotateX = -72f;
     public float adder;
+    public float multiplier = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        int randomNum = Random.Range(10, 20);
+        targetDest = randomNum;
     }
 
     // Update is called once per frame
@@ -27,19 +30,21 @@ public class CameraControl : MonoBehaviour
         {
             if(transform.position.y > targetY)
             {
-                transform.position -= new Vector3(0f, 0.02f, 0f);
+                transform.position -= new Vector3(0f, 0.02f * multiplier, 0f);
             }
             if (transform.position.z < targetZ)
             {
-                transform.position += new Vector3(0f, 0f, 0.01f);
+                transform.position += new Vector3(0f, 0f, 0.01f * multiplier);
             }
             
             if (adder > rotateX)
             {
-                adder -= 0.1f;
-                transform.Rotate(-0.1f, 0f, 0f);
+                float increase = -0.12f * multiplier;
+                adder += increase;
+                transform.Rotate(increase, 0f, 0f);
+
+                gm.expansionPoint -= -0.1f * multiplier;
             }
-            
         }
     }
 }

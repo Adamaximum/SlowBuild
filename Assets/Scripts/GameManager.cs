@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
     float startY; //Starting Y Position
     float endY; //Ending Y Position
+
+    public float expansionPoint = 15;
     
     public int spawnChance = 0;
     public float astReset;
@@ -56,7 +58,7 @@ public class GameManager : MonoBehaviour {
         stars = new List<GameObject>(); //Stars List
 
         //Spawning Range for Stars and Asteroids
-        startY = 12;
+        startY = expansionPoint;
         endY = -6;
         distance = startY - endY;
 
@@ -69,6 +71,8 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        startY = expansionPoint;
 
         gameStates();
 
@@ -154,7 +158,7 @@ public class GameManager : MonoBehaviour {
                 SceneManager.LoadScene("SampleScene");
             }
             Title.text = "\nGame Over!";
-            Subtitle.text = "\n\n\n\nPress R to Play Again!";
+            Subtitle.text = "\n\nPress R to Play Again!";
         }
     }
 
@@ -204,7 +208,7 @@ public class GameManager : MonoBehaviour {
             starSpeed.Add(10f); //Adding speed
         }
             
-            float starXPos = Random.Range(-13f, 13f); //Random X Position Assignment
+            float starXPos = Random.Range(-expansionPoint, expansionPoint); //Random X Position Assignment
 
             newStar.transform.position = new Vector3(starXPos, startY, 1); //New stars Positions
 
