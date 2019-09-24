@@ -13,16 +13,12 @@ public class AsteroidControl : MonoBehaviour {
     public GameObject shipExpPrefab;
     
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         player = GameObject.Find("Player").GetComponent<PlayerControl>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "Player" && gm.gameState == 2)

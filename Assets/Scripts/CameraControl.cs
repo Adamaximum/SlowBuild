@@ -39,7 +39,7 @@ public class CameraControl : MonoBehaviour
             
             if (adder > rotateX)
             {
-                float increase = -0.12f * multiplier;
+                float increase = -0.2f * multiplier;
                 adder += increase;
                 transform.Rotate(increase, 0f, 0f);
 

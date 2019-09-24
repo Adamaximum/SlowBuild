@@ -20,6 +20,8 @@ public class PlayerControl : MonoBehaviour
 
     public MeshRenderer playerMR;
 
+    public AudioSource shoot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class PlayerControl : MonoBehaviour
         playerMR = GetComponent<MeshRenderer>();
 
         origin = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+        shoot = GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -74,10 +78,11 @@ public class PlayerControl : MonoBehaviour
 
         bulletReset++;
 
-        if (Input.GetKeyDown(KeyCode.Space) && bulletReset >= 20)
+        if (Input.GetKeyDown(KeyCode.Space) && bulletReset >= 15)
         {
             Fire();
             bulletReset = 0;
+            shoot.Play();
         }
     }
 
